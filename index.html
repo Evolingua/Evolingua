@@ -37,6 +37,49 @@
             color: #7f8c8d;
             font-size: 0.9em;
         }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 8px 12px;
+            border: 2px solid #bdc3c7;
+            border-radius: 4px;
+            font-size: 14px;
+            font-family: Arial, sans-serif;
+            box-sizing: border-box;
+        }
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #3498db;
+        }
+        .submit-btn {
+            background-color: #2c3e50;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .submit-btn:hover {
+            background-color: #34495e;
+        }
+        .form-group textarea {
+            resize: vertical;
+            min-height: 60px;
+        }
     </style>
 </head>
 <body>
@@ -61,6 +104,90 @@
                 Welcome to the Evolingua repository. This project is designed to provide 
                 insights into linguistic evolution and language development patterns.
             </p>
+        </div>
+
+        <div class="content">
+            <h2>Language Courses</h2>
+            <p>
+                Discover the evolution of languages through our immersive language courses. 
+                Learn how languages develop and change over time while mastering new linguistic skills.
+            </p>
+            <form class="booking-form">
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="course">Select Course:</label>
+                    <select id="course" name="course" required>
+                        <option value="">Choose a course...</option>
+                        <option value="spanish">Spanish Language Evolution</option>
+                        <option value="french">French Linguistic Development</option>
+                        <option value="mandarin">Mandarin Historical Changes</option>
+                        <option value="arabic">Arabic Language Patterns</option>
+                        <option value="english">English Language Evolution</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="level">Experience Level:</label>
+                    <select id="level" name="level" required>
+                        <option value="">Select level...</option>
+                        <option value="beginner">Beginner</option>
+                        <option value="intermediate">Intermediate</option>
+                        <option value="advanced">Advanced</option>
+                    </select>
+                </div>
+                <button type="submit" class="submit-btn">Book Course</button>
+            </form>
+        </div>
+
+        <div class="content">
+            <h2>Speaking Circles</h2>
+            <p>
+                Join our Speaking Circles to practice language skills in a supportive environment. 
+                Explore how spoken language evolves through real-time conversation and interaction.
+            </p>
+            <form class="registration-form">
+                <div class="form-group">
+                    <label for="speaker-name">Full Name:</label>
+                    <input type="text" id="speaker-name" name="speaker-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="speaker-email">Email:</label>
+                    <input type="email" id="speaker-email" name="speaker-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="circle-language">Circle Language:</label>
+                    <select id="circle-language" name="circle-language" required>
+                        <option value="">Choose a language...</option>
+                        <option value="spanish">Spanish Circle</option>
+                        <option value="french">French Circle</option>
+                        <option value="mandarin">Mandarin Circle</option>
+                        <option value="arabic">Arabic Circle</option>
+                        <option value="english">English Circle</option>
+                        <option value="multilingual">Multilingual Circle</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="schedule">Preferred Schedule:</label>
+                    <select id="schedule" name="schedule" required>
+                        <option value="">Select time...</option>
+                        <option value="morning">Morning (9:00-11:00 AM)</option>
+                        <option value="afternoon">Afternoon (2:00-4:00 PM)</option>
+                        <option value="evening">Evening (6:00-8:00 PM)</option>
+                        <option value="weekend">Weekend Sessions</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="experience">Speaking Experience:</label>
+                    <textarea id="experience" name="experience" rows="3" placeholder="Tell us about your language speaking experience..."></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Register for Speaking Circle</button>
+            </form>
         </div>
     </main>
 
